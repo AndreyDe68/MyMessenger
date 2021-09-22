@@ -4,17 +4,36 @@ namespace MyMessenger
 {
     class Program
     {
+        private static int MessageID;
+        private static string UserName;
+        private static MessengerClientAPI API = new MessengerClientAPI();
+
+        private static void GetNewMessage()
+        {
+            Message msg = API.GetMessage(MessageID);
+            while (msg != null)
+            {
+                Console.WriteLine(msg);
+                MessageID++;
+                msg = API.GetMessage(MessageID);
+            }
+        }
         static void Main(string[] args)
         {
-            Message msg = new Message("AndrewDe", "Hi!", DateTime.UtcNow);
-            string output = JsonConvert.SerializeObject(msg);
-            Console.WriteLine(output);
-            Message desMsg = JsonConvert.DeserializeObject<Message>(output);
-            Console.WriteLine(desMsg);
-
-            //{ "Username":"AndrewDe","MessageText":"Hi!","TimeStamp":"2021-09-22T11:03:43.8272765Z"}
-            //AndrewDe < 22.09.2021 11:03:43 >: Hi!
-            //Console.WriteLine(msg.ToString());
+            MessageID = 1;
+            Console.WriteLine("Введите ваше имя");
+            UserName = Console.ReadLine();
+            string MessageText = "";
+            while (MessageText != "exit")
+            {
+                GetNewMessage();
+                MessageText = Console.ReadLine();
+                if (MessageText.Length > 1)
+                {
+                    Message Sendmsg = new Message(UserName, MessageText, DateTime.Now);
+                    API.SendMessage(Sendmsg);
+                }
+            }
         }
     }
 }
