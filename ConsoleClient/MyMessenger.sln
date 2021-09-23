@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMessenger", "MyMessenger.csproj", "{6293DC88-6456-431A-A60E-2A5667803C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient.csproj", "{6293DC88-6456-431A-A60E-2A5667803C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspCoreServer", "..\AspCoreServer\AspCoreServer.csproj", "{92FD15E6-0301-4659-A8F5-859397FAA4C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspCoreServer", "..\AspCoreServer\AspCoreServer.csproj", "{92FD15E6-0301-4659-A8F5-859397FAA4C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "..\WindowsFormsClient\WindowsFormsClient.csproj", "{0632F633-5CE2-4F53-BA4A-9439D2AE7814}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{92FD15E6-0301-4659-A8F5-859397FAA4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FD15E6-0301-4659-A8F5-859397FAA4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92FD15E6-0301-4659-A8F5-859397FAA4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0632F633-5CE2-4F53-BA4A-9439D2AE7814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0632F633-5CE2-4F53-BA4A-9439D2AE7814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0632F633-5CE2-4F53-BA4A-9439D2AE7814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0632F633-5CE2-4F53-BA4A-9439D2AE7814}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
